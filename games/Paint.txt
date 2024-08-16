@@ -1,0 +1,10 @@
+%NAVUHODONOSER%
+Name=Paint
+Process=Редактор исходного кода
+#=Look For Pixel
+##LookForEmpty,Horizontal,WindowRect,20
+##LookForEmpty,Horizontal,WindowRectRect,20
+##MousePressRight,100,0
+#=Test
+##MousePressRight,100,0
+##Pause,wwwwwwwwwwwwwwwwwwwwwwwwwwwww

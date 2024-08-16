@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <AutoCreateForms Value="False"/>
+      <Title Value="SunflowerkOff"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="lazmouseandkeyinput"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="16">
+      <Unit0>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="mainformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MainFormUnit"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="localizationclassunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LocalizationClassUnit"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="gamedataclassunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GameDataClassUnit"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="utils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Utils"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="actionclass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ActionClass"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="windowlistformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="WindowListForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="WindowListFormUnit"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="keyboardhookunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="KeyboardHookUnit"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="actionexecutorunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ActionExecutorUnit"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="keyfunctionunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="KeyFunctionUnit"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="mousefunctionunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="MouseFunctionUnit"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="actiontimerunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ActionTimerUnit"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="actionfunctionmapunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ActionFunctionMapUnit"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="actioneditformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ActionEditForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ActionEditFormUnit"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="actionkindunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ActionKindUnit"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="settingsunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SettingsUnit"/>
+      </Unit15>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="SunflowerkOff"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf3"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

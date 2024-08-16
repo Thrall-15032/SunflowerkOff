@@ -1,0 +1,9 @@
+%NAVUHODONOSER%
+Name=Egg
+Process=Egg Surprise
+Params=StartWindowCenter
+#=Infinity Clicker
+##InfinityLoop
+###MouseMove,WindowCenter,0,0
+###MousePressLeft,10,0
+##=Test

@@ -1,0 +1,7 @@
+%NAVUHODONOSER%
+Name=AnyClicker
+Process=AnyClicker
+#=Infinity Clicker
+##InfinityLoop
+###MouseMove,Coordinates,50%,50%,0,0
+###MousePressLeft,10,0

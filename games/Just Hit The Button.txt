@@ -1,0 +1,284 @@
+%NAVUHODONOSER%
+Name=Just Hit The Button
+Process=Just Hit The Button
+#=Whole game
+##=Press play
+###KeyPressOne,Q,100,1500
+###MouseMove,Coordinates,20%,55%,0,0
+###MousePressLeft,100,1500
+##=Level 1
+###MouseMove,Coordinates,50%,14%,100,0
+###MousePressLeft,100,10
+###MouseMove,Coordinates,50%,82%,100,0
+###MousePressLeft,100,1500
+##=Level 2
+###MouseMove,Coordinates,20%,50%,100,0
+###MousePressLeft,100,10
+###MouseMove,Coordinates,40%,50%,100,0
+###MousePressLeft,100,10
+###MouseMove,Coordinates,60%,50%,100,0
+###MousePressLeft,100,10
+###MouseMove,Coordinates,80%,50%,100,0
+###MousePressLeft,100,1500
+##=Level 3
+###MouseMove,Coordinates,87%,70%,100,0
+###MousePressLeft,100,10
+###MouseMove,Coordinates,87%,80%,100,0
+###MouseMove,Coordinates,17%,80%,100,0
+###MouseMove,Coordinates,17%,30%,100,0
+###MousePressLeft,100,1500
+##=Level 4
+###MouseMove,Coordinates,23%,65%,100,0
+###KeyPressOne,R,100,1500
+###MousePressLeft,400,100
+###MouseMove,Coordinates,40%,37%,2000,0
+###MouseMove,Coordinates,83%,18%,4000,0
+###MousePressLeft,200,10
+###MouseMove,Coordinates,90%,18%,500,0
+###MouseMove,Coordinates,90%,82%,2000,0
+###MouseMove,Coordinates,64%,82%,2000,0
+###MousePressLeft,200,1500
+##=Level 5
+###MouseMove,Coordinates,87%,83%,100,0
+###MousePressLeft,100,10
+###MouseMove,Coordinates,13%,17%,100,0
+###MousePressLeft,100,10
+###MouseMove,Coordinates,50%,50%,100,0
+###MousePressLeft,100,1500
+##=Level 6
+###MouseMove,Coordinates,20%,30%,200,10
+###KeyPressOne,R,100,1500
+###MousePressLeft,250,1500
+###MouseMove,Coordinates,80%,30%,1200,0
+###MouseMove,Coordinates,80%,70%,1000,0
+###MouseMove,Coordinates,20%,70%,2000,0
+###MousePressLeft,100,10
+###MousePressLeft,250,4000
+##=Level 7
+###MouseMove,Coordinates,76%,20%,100,0
+###KeyPressOne,R,100,1500
+###MousePressLeft,100,2000
+###MouseMove,Coordinates,23%,77%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,23%,23%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,76%,80%,0,0
+###MousePressLeft,100,1500
+##=Level 8
+###Pause,Пройдите уровень самостоятельно и нажмите продолжить (F3)
+##=Level 9
+###MouseMove,Coordinates,8%,15%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,0%,15%,0,0
+###MouseMove,Coordinates,0%,100%,0,0
+###MouseMove,Coordinates,92%,100%,0,0
+###MouseMove,Coordinates,92%,86%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,92%,100%,0,0
+###MouseMove,Coordinates,8%,100%,0,0
+###MouseMove,Coordinates,8%,86%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,8%,100%,0,0
+###MouseMove,Coordinates,100%,100%,0,0
+###MouseMove,Coordinates,100%,15%,0,0
+###MouseMove,Coordinates,92%,15%,0,0
+###MousePressLeft,100,1500
+##=Level 10
+###Pause,Пройдите уровень самостоятельно и нажмите продолжить (F3)
+##=Level 11
+###MouseMove,Coordinates,43%,24%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,13%,83%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,83%,53%,0,0
+###MousePressLeft,100,1500
+##=Level 12
+###MouseMove,Coordinates,13%,77%,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,60%,77%,100,0
+###MouseMove,Coordinates,60%,65%,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,60%,77%,100,0
+###MouseMove,Coordinates,22%,77%,100,0
+###MouseMove,Coordinates,13%,23%,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,22%,77%,100,0
+###MouseMove,Coordinates,70%,77%,100,0
+###MouseMove,Coordinates,70%,23%,100,0
+###MousePressLeft,100,1500
+##=Level 13
+###MouseMove,Coordinates,50%,50%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,50%,53.5%,1000,0
+###MouseMove,Coordinates,44.5%,53.5%,1000,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,50%,53.5%,1000,0
+###MouseMove,Coordinates,50%,46.2%,1000,0
+###MouseMove,Coordinates,44.5%,46.2%,1000,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,50%,46.2%,1000,0
+###MouseMove,Coordinates,50%,53%,1000,0
+###MouseMove,Coordinates,55%,53%,1000,0
+###MouseMove,Coordinates,55%,50%,1000,0
+###MousePressLeft,100,1500
+##=Level 14
+###MouseMove,Coordinates,10%,14%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,92%,88%,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,86%,17%,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,23%,82%,100,0
+###MousePressLeft,100,1500
+##=Level 15
+###MouseMove,Coordinates,20%,71%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,80%,71%,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,50%,71%,100,0
+###MouseMove,Coordinates,50%,30%,100,0
+###MouseMove,Coordinates,20%,30%,100,0
+###MouseMove,Coordinates,20%,47%,100,0
+###MousePressLeft,100,1500
+##=Level 16-17
+###Pause,Этот и следующий уровень пройдите самостоятельно и нажмите продолжить (F3)
+##=Level 18
+###MouseMove,Coordinates,16%,50%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,83%,50%,0,0
+###MouseMove,Coordinates,83%,16%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,16%,16%,0,100
+###MouseMove,Coordinates,16%,50%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,16%,83%,0,200
+###MouseMove,Coordinates,83%,83%,0,0
+###MousePressLeft,100,1500
+##=Level 19
+###MouseMove,Coordinates,13%,18%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,13%,82%,0,0
+###MouseMove,Coordinates,50%,82%,0,0
+###MouseMove,Coordinates,50%,18%,0,0
+###MouseMove,Coordinates,87%,18%,0,0
+###MouseMove,Coordinates,87%,82%,0,0
+###MousePressLeft,100,1500
+##=Level 20
+###MouseMove,Coordinates,48%,18%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,48%,35%,0,0
+###MouseMove,Coordinates,75%,35%,0,0
+###MouseMove,Coordinates,75%,80%,0,0
+###MouseMove,Coordinates,22%,80%,0,0
+###MouseMove,Coordinates,22%,57%,0,0
+###MouseMove,Coordinates,12%,57%,0,0
+###MouseMove,Coordinates,12%,27%,0,0
+###MouseMove,Coordinates,25%,27%,0,0
+###MouseMove,Coordinates,25%,12%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,25%,27%,0,0
+###MouseMove,Coordinates,12%,27%,0,0
+###MouseMove,Coordinates,12%,57%,0,0
+###MouseMove,Coordinates,22%,57%,0,0
+###MouseMove,Coordinates,22%,80%,0,0
+###MouseMove,Coordinates,75%,80%,0,0
+###MouseMove,Coordinates,75%,35%,0,0
+###MouseMove,Coordinates,78%,15%,0,0
+###MouseMove,Coordinates,90%,15%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,78%,15%,0,0
+###MouseMove,Coordinates,75%,35%,0,0
+###MouseMove,Coordinates,75%,80%,0,0
+###MouseMove,Coordinates,45%,80%,0,0
+###MouseMove,Coordinates,45%,59%,0,0
+###MousePressLeft,100,1500
+##=Level 21
+###MouseMove,Coordinates,10%,12%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,90%,86%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,90%,12%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,10%,86%,0,0
+###MousePressLeft,100,1500
+##=Level 22
+###Pause,Пройдите уровень самостоятельно и нажмите продолжить (F3)
+##=Level 23
+###MouseMove,Coordinates,13%,89%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,33%,89%,0,0
+###MouseMove,Coordinates,33%,0%,0,0
+###MouseMove,Coordinates,58%,0%,0,0
+###MouseMove,Coordinates,58%,36%,0,0
+###MouseMove,Coordinates,87%,36%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,58%,36%,0,0
+###MouseMove,Coordinates,58%,0%,0,0
+###MouseMove,Coordinates,33%,0%,0,0
+###MouseMove,Coordinates,33%,89%,0,0
+###MouseMove,Coordinates,17%,89%,0,0
+###MouseMove,Coordinates,17%,30%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,17%,89%,0,0
+###MouseMove,Coordinates,33%,89%,0,0
+###MouseMove,Coordinates,33%,0%,0,0
+###MouseMove,Coordinates,58%,0%,0,0
+###MouseMove,Coordinates,58%,65%,0,0
+###MouseMove,Coordinates,87%,65%,0,0
+###MousePressLeft,100,1500
+##=Level 24
+###Pause,Пройдите уровень самостоятельно и нажмите продолжить (F3)
+##=Level 25
+###MouseMove,Coordinates,8%,50%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,0%,50%,100,0
+###MouseMove,Coordinates,0%,0%,100,0
+###MouseMove,Coordinates,20%,0%,100,0
+###MouseMove,Coordinates,80%,70%,100,0
+###MouseMove,Coordinates,88%,58%,100,0
+###MouseMove,Coordinates,90%,47%,0,0
+###MousePressLeft,100,1500
+##=Level 26
+###Pause,Нажмите кнопку A и нажмите продолжить (F3)
+###LookForEmpty,Horizontal,WindowRect,70
+###Pause,Нажмите кнопки B C и D и на следующем уровне нажмите продолжить (F3)
+##=Level 27
+###MouseMove,Coordinates,20%,77%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,47%,77%,0,0
+###MouseMove,Coordinates,47%,25%,0,0
+###MouseMove,Coordinates,83%,25%,0,0
+###MouseMove,Coordinates,83%,64%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,83%,25%,0,0
+###MouseMove,Coordinates,47%,25%,0,0
+###MouseMove,Coordinates,47%,77%,0,0
+###MouseMove,Coordinates,13%,77%,0,0
+###MousePressLeft,100,1500
+##=Level 28
+###MouseMove,Coordinates,10%,17%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,10%,50%,0,0
+###MouseMove,Coordinates,90%,50%,0,0
+###MouseMove,Coordinates,90%,65%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,90%,50%,0,0
+###MouseMove,Coordinates,17%,50%,0,0
+###MouseMove,Coordinates,17%,88%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,17%,50%,0,0
+###MouseMove,Coordinates,90%,50%,0,0
+###MouseMove,Coordinates,90%,17%,0,0
+###MousePressLeft,100,1500
+##=Level 29
+###MouseMove,Coordinates,50%,50%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,20%,50%,0,0
+###MouseMove,Coordinates,20%,0%,0,0
+###MouseMove,Coordinates,100%,0%,0,0
+###MouseMove,Coordinates,89%,93%,0,0
+###MousePressLeft,100,1500
+##=Level 30
+###Loop,100
+####MouseMove,Coordinates,50%,50%,0,0
+####MousePressLeft,100,0

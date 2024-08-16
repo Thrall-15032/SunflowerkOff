@@ -1,0 +1,83 @@
+%NAVUHODONOSER%
+Name=10 Second Ninja
+Process=10 Second Ninja
+#=Whole game
+##=Level 1
+###KeyPressOne,Y,90,20
+###KeyPressMany,YU,320,100
+###KeyPressOne,T,20,10
+###KeyPressOne,W,20,10
+###KeyPressMany,TU,310,50
+###KeyPressMany,TU,310,50
+###KeyPressOne,W,20,10
+###KeyPressOne,Y,20,70
+###KeyPressOne,U,270,50
+###KeyPressOne,U,70,50
+###KeyPressOne,W,10,10
+##=Level 2
+###KeyPressMany,TU,310,50
+###KeyPressMany,TU,310,50
+###KeyPressOne,Y,20,10
+###KeyPressOne,W,20,50
+###KeyPressMany,YU,200,100
+###KeyPressMany,YU,350,50
+###KeyPressOne,W,20,70
+###KeyPressMany,YU,600,50
+###KeyPressMany,YU,1100,50
+###KeyPressOne,Q,20,50
+##=Level 3
+###KeyPressOne,T,400,50
+###KeyPressOne,U,300,50
+###KeyPressMany,YU,200,100
+###KeyPressOne,T,20,50
+###KeyPressOne,W,20,70
+###KeyPressMany,UYQ,450,50
+###KeyPressOne,Y,300,50
+###KeyPressOne,U,300,50
+###KeyPressOne,W,20,70
+###KeyPressMany,UT,200,150
+###KeyPressMany,UY,300,50
+###KeyPressMany,UY,300,50
+###KeyPressOne,Q,10,50
+###KeyPressOne,T,50,50
+###KeyPressOne,U,300,50
+###KeyPressOne,U,300,50
+###KeyPressOne,W,10,50
+##=Level 4
+###KeyPressOne,T,400,50
+###KeyPressOne,Q,10,50
+###KeyPressOne,Y,100,50
+###KeyPressOne,W,10,10
+###KeyPressOne,Y,100,50
+###KeyPressOne,W,10,10
+###KeyPressOne,Y,350,50
+###KeyPressMany,UY,220,50
+###KeyPressMany,UY,220,250
+###KeyPressOne,U,300,50
+###KeyPressMany,TU,350,50
+###KeyPressOne,Q,10,50
+###KeyPressOne,Y,50,50
+###KeyPressMany,UY,230,50
+###KeyPressMany,UY,230,50
+###KeyPressOne,W,10,50
+###KeyPressOne,Y,800,50
+###KeyPressMany,UY,200,50
+###KeyPressOne,Q,10,50
+##=Level 5
+###KeyPressOne,W,10,10
+###KeyPressOne,Y,300,540
+###KeyPressOne,Q,10,10
+###KeyPressOne,Y,330,800
+###KeyPressOne,T,20,50
+###KeyPressOne,W,10,10
+###KeyPressOne,Y,20,50
+###KeyPressOne,W,10,10
+###KeyPressOne,Y,330,50
+###KeyPressMany,UY,400,50
+###KeyPressMany,UY,250,50
+###KeyPressOne,Q,10,150
+###KeyPressMany,UT,140,50
+###KeyPressMany,UT,280,200
+###KeyPressMany,UY,250,50
+###KeyPressMany,UY,300,150
+###KeyPressOne,Q,10,10

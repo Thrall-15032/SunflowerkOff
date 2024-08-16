@@ -1,0 +1,17 @@
+%NAVUHODONOSER%
+Name=Bug
+Process=BUG
+Params=WindowPosition,1400,100,WindowSize,380,880,StartWindowCenter
+#=Infinity Clicker
+##InfinityLoop
+###MouseMove,WindowCenter,0,0
+###MousePressLeft,5,20
+#=Timer Chapter
+##Timer,11000
+###KeyPressOne,1,50,0
+##Timer,21000
+###KeyPressOne,2,50,0
+##Timer,41000
+###KeyPressOne,3,50,0
+##Timer,61000
+###KeyPressOne,4,50,0

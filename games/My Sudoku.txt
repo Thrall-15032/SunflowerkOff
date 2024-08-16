@@ -1,0 +1,33 @@
+%NAVUHODONOSER%
+Name=My Sudoku
+Process=My Sudoku
+#=Level 11
+##InfinityLoop
+###MouseMove,Coordinates,40.5%,29%,0,0
+###MousePressLeft,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,48.5%,33.5%,0,0
+###MousePressLeft,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,43.5%,38%,0,0
+###MousePressLeft,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,46%,42%,0,0
+###MousePressLeft,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,54%,53%,0,0
+###MousePressLeft,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,56%,48%,0,0
+###MousePressLeft,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,51%,61%,0,0
+###MousePressLeft,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,59%,57%,0,0
+###MousePressLeft,100,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,57%,40%,0,0
+###MousePressLeft,100,0
+###MouseMove,Coordinates,8%,94%,0,0
+###MousePressLeft,100,0
