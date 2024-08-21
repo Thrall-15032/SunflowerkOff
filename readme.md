@@ -2,6 +2,9 @@
 
 Use this program at your own risk. Because careless use, custom settings or Alt+Tab combination can send all signals (e.g. endless double clicks) to other application, which can cause problems with the operating system.
 
+# Limitations
+All scripts were created and tested with resolution 1980x1080, work with other resolutions don't guarantee.
+
 # Hot Keys
 * F3 - continue after Pause command
 * F4 - break script
