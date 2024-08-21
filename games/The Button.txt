@@ -1,7 +1,0 @@
-%NAVUHODONOSER%
-Name=THE BUTTON
-Process=button pusher
-#=Infinity Clicker
-##InfinityLoop
-###MousePressLeft,DisplayCenter,50
-##=Test
