@@ -2,6 +2,10 @@
 
 Use this program at your own risk. Because careless use, custom settings or Alt+Tab combination can send all signals (e.g. endless double clicks) to other application, which can cause problems with the operating system.
 
+# Hot Keys
+* F3 - continue after Pause command
+* F4 - break script
+
 # Existing scripts
 
 * 10 Second Ninja.txt - WIP script for game [10 Second Ninja X](https://store.steampowered.com/app/435790/10_Second_Ninja_X/)
