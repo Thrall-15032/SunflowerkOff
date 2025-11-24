@@ -17,12 +17,17 @@ type
     actChapter, actLoop, actInfinityLoop, actTimer, actPause,
     actKeyDownOne, actKeyUpOne, actKeyPressOne, actKeyPressMany,
     actMouseMove, actLookForEmpty, actLookForPixel,
-    actMousePressLeft, actMousePressRight, actMouseFloodLeft, actMouseFloodRight
+    actMousePressLeft, actMouseDownLeft, actMouseUpLeft,
+    actMousePressRight, actMouseDownRight, actMouseUpRight,
+    actMouseFloodLeft, actMouseFloodRight
   );
 
   TPointKind = (pntUnknown, pntCoordinates, pntDisplayCenter, pntWindowCenter);
 
-  TLookKind = (lookUnknown, lookHorizontal, lookVertical, lookSpiral);
+  TLookKind = (
+    lookUnknown, lookHorizontalLeftRight, lookHorizontalPingPong,
+    lookVerticalLeftRight, lookVerticalPingPong, lookSpiral
+  );
 
   TRectKind = (rectUnknown, rectFullScreen, rectWindow, rectCustom);
 
@@ -136,7 +141,11 @@ begin
   FStringActionKindMap.Add('LookForEmpty', actLookForEmpty);
   FStringActionKindMap.Add('LookForPixel', actLookForPixel);
   FStringActionKindMap.Add('MousePressLeft', actMousePressLeft);
+  FStringActionKindMap.Add('MouseDownLeft', actMouseDownLeft);
+  FStringActionKindMap.Add('MouseUpLeft', actMouseUpLeft);
   FStringActionKindMap.Add('MousePressRight', actMousePressRight);
+  FStringActionKindMap.Add('MouseDownRight', actMouseDownRight);
+  FStringActionKindMap.Add('MouseUpRight', actMouseUpRight);
   FStringActionKindMap.Add('MouseFloodLeft', actMouseFloodLeft);
   FStringActionKindMap.Add('MouseFloodRight', actMouseFloodRight);
 
@@ -156,7 +165,11 @@ begin
   FActionKindStringMap.Add(actLookForEmpty, MakeRecord('LookForEmpty', 'LookForEmpty'));
   FActionKindStringMap.Add(actLookForPixel, MakeRecord('LookForPixel', 'LookForPixel'));
   FActionKindStringMap.Add(actMousePressLeft, MakeRecord('MousePressLeft', 'MousePressLeft'));
+  FActionKindStringMap.Add(actMouseDownLeft, MakeRecord('MouseDownLeft', 'MouseDownLeft'));
+  FActionKindStringMap.Add(actMouseUpLeft, MakeRecord('MouseUpLeft', 'MouseUpLeft'));
   FActionKindStringMap.Add(actMousePressRight, MakeRecord('MousePressRight', 'MousePressRight'));
+  FActionKindStringMap.Add(actMouseDownRight, MakeRecord('MouseDownRight', 'MouseDownRight'));
+  FActionKindStringMap.Add(actMouseUpRight, MakeRecord('MouseUpRight', 'MouseUpRight'));
   FActionKindStringMap.Add(actMouseFloodLeft, MakeRecord('MouseFloodLeft', 'MouseFloodLeft'));
   FActionKindStringMap.Add(actMouseFloodRight, MakeRecord('MouseFloodRight', 'MouseFloodRight'));
 
@@ -172,14 +185,18 @@ begin
   FPointKindStringMap.Add(pntCoordinates, MakeRecord('Coordinates', 'Coordinates'));
 
   FStringLookKindMap.Add('Unknown', lookUnknown);
-  FStringLookKindMap.Add('Horizontal', lookHorizontal);
-  FStringLookKindMap.Add('Vertical', lookVertical);
+  FStringLookKindMap.Add('HorizontalLeftRight', lookHorizontalLeftRight);
+  FStringLookKindMap.Add('HorizontalPingPong', lookHorizontalPingPong);
+  FStringLookKindMap.Add('VerticalLeftRight', lookVerticalLeftRight);
+  FStringLookKindMap.Add('VerticalPingPong', lookVerticalPingPong);
   FStringLookKindMap.Add('Spiral', lookSpiral);
 
   // TODO: add localization captions
   FLookKindStringMap.Add(lookUnknown, MakeRecord('Unknown', 'Unknown'));
-  FLookKindStringMap.Add(lookHorizontal, MakeRecord('Horizontal', 'Horizontal'));
-  FLookKindStringMap.Add(lookVertical, MakeRecord('Vertical', 'Vertical'));
+  FLookKindStringMap.Add(lookHorizontalLeftRight, MakeRecord('HorizontalLeftRight', 'HorizontalLeftRight'));
+  FLookKindStringMap.Add(lookHorizontalPingPong, MakeRecord('HorizontalPingPong', 'HorizontalPingPong'));
+  FLookKindStringMap.Add(lookVerticalLeftRight, MakeRecord('VerticalLeftRight', 'VerticalLeftRight'));
+  FLookKindStringMap.Add(lookVerticalPingPong, MakeRecord('VerticalPingPong', 'VerticalPingPong'));
   FLookKindStringMap.Add(lookSpiral, MakeRecord('Spiral', 'Spiral'));
 
   FStringRectKindMap.Add('Unknown', rectUnknown);

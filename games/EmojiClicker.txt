@@ -1,0 +1,7 @@
+%NAVUHODONOSER%
+Name=EmojiClicker
+Process=Emoji Clicker
+Params=WindowPosition,460,150,WindowSize,800,600,StartDisplayCenter
+#=Chapter
+##InfinityLoop
+###MouseFloodLeft,Spiral,CustomRect,770-1150-350-730,30,25,0

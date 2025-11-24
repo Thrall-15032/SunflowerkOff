@@ -14,6 +14,7 @@ uses
 
 
 type
+  TEdtPosSize = ( edtUnknownValue, edtPosValue, edtSizeValue );
 
   { TMainForm }
 
@@ -105,6 +106,8 @@ type
     procedure InitForm();
     procedure CheckProcess();
     procedure CheckUnsaved();
+    procedure SetEdtPosSizeValue(x: Int64; y: Int64; event: TNotifyEvent;
+      value: TEdtPosSize = edtUnknownValue);
     procedure SaveAllChanges(ANewFile: string = '');
     procedure ToggleTreeViewCheckBoxes(Node: TTreeNode);
   public
@@ -132,6 +135,7 @@ uses
 procedure TMainForm.InitForm();
 var
   games: array of string;
+  EventTmp: TNotifyEvent;
 begin
   lblChooseGame.Caption := Localization.ChooseGameLabel;
   lblGameName.Caption := Localization.GameNameLabel;
@@ -140,6 +144,7 @@ begin
   edtGameProcess.Text := '';
   btnStart.Caption := Localization.StartButton;
   btnStart.Enabled := false;
+  btnStop.Caption := Localization.StopButton;
   pageProcess.ActivePageIndex := 0;
   tabProcess.Caption := Localization.ProcessTab;
   tabParams.Caption := Localization.ParamsTab;
@@ -156,10 +161,8 @@ begin
   chbDoStartWindowCenter.Caption := Localization.GameDoStartWindowCenterLabel;
   chbDoWindowPosition.Caption := Localization.GameDoWindowPositionLabel;
   chbDoWindowSize.Caption := Localization.GameDoWindowSizeLabel;
-  edtWindowPosX.Text := '';
-  edtWindowPosY.Text := '';
-  edtWindowSizeX.Text := '';
-  edtWindowSizeY.Text := '';
+  SetEdtPosSizeValue(-INFINITE, -INFINITE, @edtWindowPosChange, edtPosValue);
+  SetEdtPosSizeValue(-INFINITE, -INFINITE, @edtWindowSizeChange, edtSizeValue);
 
   FTreeViewGuid := TGUID.NewGuid();
   games := GameDataClass.getList();
@@ -227,6 +230,40 @@ begin
   end;
 end;
 
+procedure TMainForm.SetEdtPosSizeValue(x: Int64; y: Int64;
+  event: TNotifyEvent; value: TEdtPosSize = edtUnknownValue);
+var
+  StrX, StrY: string;
+begin
+  if (x = -INFINITE) then
+    StrX := ''
+  else
+    StrX := IntToStr(x);
+  if (y = -INFINITE) then
+    StrY := ''
+  else
+    StrY := IntToStr(y);
+
+  if (value = edtPosValue) then
+  begin
+    edtWindowPosX.OnChange := nil;
+    edtWindowPosY.OnChange := nil;
+    edtWindowPosX.Text := StrX;
+    edtWindowPosY.Text := StrY;
+    edtWindowPosX.OnChange := event;
+    edtWindowPosY.OnChange := event;
+  end;
+  if (value = edtSizeValue) then
+  begin
+    edtWindowSizeX.OnChange := nil;
+    edtWindowSizeY.OnChange := nil;
+    edtWindowSizeX.Text := StrX;
+    edtWindowSizeY.Text := StrY;
+    edtWindowSizeX.OnChange := event;
+    edtWindowSizeY.OnChange := event;
+  end
+end;
+
 procedure TMainForm.SaveAllChanges(ANewFile: string = '');
 var
   i, depth: Integer;
@@ -259,6 +296,19 @@ begin
   GameDataClass.LoadFile(cmbGameList.Text, TreeView1);
   edtGameName.Text := GameDataClass.GameName;
   edtGameProcess.Text := GameDataClass.GameProcess;
+  chbDoMaximize.Checked := GameDataClass.GameParams.DoMaximize;
+  chbDoStartDisplayCenter.Checked := GameDataClass.GameParams.DoStartDisplayCenter;
+  chbDoStartWindowCenter.Checked := GameDataClass.GameParams.DoStartWindowCenter;
+  chbDoWindowPosition.Checked := GameDataClass.GameParams.DoWindowPosition;
+  SetEdtPosSizeValue(
+    GameDataClass.GameParams.NewWindowPosition.X,
+    GameDataClass.GameParams.NewWindowPosition.Y,
+    @edtWindowPosChange, edtPosValue);
+  chbDoWindowSize.Checked := GameDataClass.GameParams.DoWindowSize;
+  SetEdtPosSizeValue(
+    GameDataClass.GameParams.NewWindowSize.X,
+    GameDataClass.GameParams.NewWindowSize.Y,
+    @edtWindowSizeChange, edtSizeValue);
   lblProcessTest.Caption := '';
   btnStart.Enabled := false;
   CheckProcess();

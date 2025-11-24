@@ -7,10 +7,10 @@ object MainForm: TMainForm
   ClientHeight = 431
   ClientWidth = 768
   DesignTimePPI = 120
+  LCLVersion = '4.4.0.0'
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  LCLVersion = '3.4.0.0'
   object lblChooseGame: TLabel
     Left = 424
     Height = 28
@@ -58,9 +58,9 @@ object MainForm: TMainForm
     ShowHint = True
     StateImages = ImageList1
     TabOrder = 2
+    Options = [tvoAutoExpand, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoNoDoubleClickExpand, tvoThemedDraw]
     OnAdvancedCustomDrawItem = TreeView1AdvancedCustomDrawItem
     OnClick = TreeView1Click
-    Options = [tvoAutoExpand, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoNoDoubleClickExpand, tvoThemedDraw]
   end
   object pnlManagement: TPanel
     Left = 8
@@ -81,8 +81,8 @@ object MainForm: TMainForm
       Images = ImageList1
       ImageIndex = 5
       ImageWidth = 25
-      OnClick = btnSaveClick
       TabOrder = 0
+      OnClick = btnSaveClick
     end
     object btnNone: TBitBtn
       Left = 266
@@ -100,8 +100,8 @@ object MainForm: TMainForm
       Images = ImageList1
       ImageIndex = 2
       ImageWidth = 25
-      OnClick = btnAddClick
       TabOrder = 2
+      OnClick = btnAddClick
     end
     object btnEdit: TBitBtn
       Left = 334
@@ -112,8 +112,8 @@ object MainForm: TMainForm
       Images = ImageList1
       ImageIndex = 4
       ImageWidth = 25
-      OnClick = btnEditClick
       TabOrder = 3
+      OnClick = btnEditClick
     end
     object btnDelete: TBitBtn
       Left = 368
@@ -124,8 +124,8 @@ object MainForm: TMainForm
       Images = ImageList1
       ImageIndex = 3
       ImageWidth = 25
-      OnClick = btnDeleteClick
       TabOrder = 4
+      OnClick = btnDeleteClick
     end
     object btnCollapse: TBitBtn
       Left = 0
@@ -136,8 +136,8 @@ object MainForm: TMainForm
       Images = ImageList1
       ImageIndex = 9
       ImageWidth = 25
-      OnClick = btnCollapseClick
       TabOrder = 5
+      OnClick = btnCollapseClick
     end
     object btnUncheck: TBitBtn
       Left = 32
@@ -148,8 +148,8 @@ object MainForm: TMainForm
       Images = ImageList1
       ImageIndex = 10
       ImageWidth = 25
-      OnClick = btnUncheckClick
       TabOrder = 6
+      OnClick = btnUncheckClick
     end
     object btnMoveUp: TBitBtn
       Left = 64
@@ -160,8 +160,8 @@ object MainForm: TMainForm
       Images = ImageList1
       ImageIndex = 7
       ImageWidth = 25
-      OnClick = btnMoveUpClick
       TabOrder = 7
+      OnClick = btnMoveUpClick
     end
     object btnMoveDown: TBitBtn
       Left = 96
@@ -172,8 +172,8 @@ object MainForm: TMainForm
       Images = ImageList1
       ImageIndex = 8
       ImageWidth = 25
-      OnClick = btnMoveDownClick
       TabOrder = 8
+      OnClick = btnMoveDownClick
     end
   end
   object pageProcess: TPageControl
@@ -248,8 +248,8 @@ object MainForm: TMainForm
         Images = ImageList1
         ImageIndex = 6
         ImageWidth = 25
-        OnClick = btnFindProcessClick
         TabOrder = 2
+        OnClick = btnFindProcessClick
       end
     end
     object tabParams: TTabSheet
@@ -344,6 +344,7 @@ object MainForm: TMainForm
     Height = 31
     Top = 392
     Width = 94
+    Anchors = [akRight, akBottom]
     Caption = 'btnStop'
     TabOrder = 5
     OnClick = btnStopClick

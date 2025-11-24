@@ -257,7 +257,8 @@ begin
       StrTmp := StrTmp + edtSleep.Text;
       IsBroken := IsBroken OR IsTimingBroken();
     end;
-    actMousePressLeft, actMousePressRight:
+    actMousePressLeft, actMouseDownLeft, actMouseUpLeft,
+    actMousePressRight, actMouseDownRight, actMouseUpRight:
     begin
       StrTmp := StrTmp + edtInterval.Text + ',';
       StrTmp := StrTmp + edtSleep.Text;

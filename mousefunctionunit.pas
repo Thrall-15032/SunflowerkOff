@@ -17,6 +17,8 @@ type
 
 procedure DoMouseMove(APoint: TPoint; Interval: Integer; Sleep: Integer);
 procedure DoMouseClick(AMouseButton: TMouseButton; Interval: Integer; Sleep: Integer);
+procedure DoMouseDown(AMouseButton: TMouseButton; Interval: Integer; Sleep: Integer);
+procedure DoMouseUp(AMouseButton: TMouseButton; Interval: Integer; Sleep: Integer);
 procedure DoRectLoop(AAction: TAction; AFunc: TLoopFunction);
 
 procedure LookForEmpty(AAction: TAction);
@@ -25,7 +27,11 @@ procedure MouseMove(AAction: TAction);
 procedure MouseMoveWindowCenter(AAction: TAction);
 procedure MouseMoveDisplayCenter(AAction: TAction);
 procedure MousePressLeft(AAction: TAction);
+procedure MouseDownLeft(AAction: TAction);
+procedure MouseUpLeft(AAction: TAction);
 procedure MousePressRight(AAction: TAction);
+procedure MouseDownRight(AAction: TAction);
+procedure MouseUpRight(AAction: TAction);
 procedure MouseFloodLeft(AAction: TAction);
 procedure MouseFloodRight(AAction: TAction);
 
@@ -53,15 +59,29 @@ begin
   SmartSleep(Sleep);
 end;
 
+procedure DoMouseDown(AMouseButton: TMouseButton; Interval: Integer; Sleep: Integer);
+begin
+  MouseAndKeyInput.MouseInput.Down(AMouseButton, []);
+  SmartSleep(Interval);
+  SmartSleep(Sleep);
+end;
+
+procedure DoMouseUp(AMouseButton: TMouseButton; Interval: Integer; Sleep: Integer);
+begin
+  MouseAndKeyInput.MouseInput.Up(AMouseButton, []);
+  SmartSleep(Interval);
+  SmartSleep(Sleep);
+end;
+
 procedure DoRectLoop(AAction: TAction; AFunc: TLoopFunction);
 var
   i, j: Integer;
   fi, p, p_k, fi_k: Double;
   OutSpiral: Integer;
-  BoolResult: Boolean;
+  BoolResult, PingPong, Line: Boolean;
 begin
   case AAction.LookKind of
-    lookHorizontal:
+    lookHorizontalLeftRight:
     begin
       j := AAction.ScreenRectRes.Top;
       while (j < AAction.ScreenRectRes.Bottom) do
@@ -80,7 +100,38 @@ begin
         j := j + AAction.ScreenStep;
       end;
     end;
-    lookVertical:
+    lookHorizontalPingPong:
+    begin
+      PingPong := false;
+      i := AAction.ScreenRectRes.Left;
+      j := AAction.ScreenRectRes.Top;
+      while (j < AAction.ScreenRectRes.Bottom) do
+      begin
+        PingPong := Not(PingPong);
+        Line := true;
+        while (Line) do
+        begin
+          if (Assigned(AFunc)) then
+          begin
+            BoolResult := AFunc(i, j, AAction);
+            if (BoolResult) then
+              Exit;
+          end;
+          if (PingPong) then
+          begin
+            i := i + AAction.ScreenStep;
+            Line := (i < AAction.ScreenRectRes.Right);
+          end
+          else
+          begin
+            i := i - AAction.ScreenStep;
+            Line := (i > AAction.ScreenRectRes.Left);
+          end;
+        end;
+        j := j + AAction.ScreenStep;
+      end;
+    end;
+    lookVerticalLeftRight:
     begin
       i := AAction.ScreenRectRes.Left;
       while (i < AAction.ScreenRectRes.Right) do
@@ -95,6 +146,36 @@ begin
               Exit;
           end;
           j := j + AAction.ScreenStep;
+        end;
+        i := i + AAction.ScreenStep;
+      end;
+    end;
+    lookVerticalPingPong:
+    begin
+      j := AAction.ScreenRectRes.Top;
+      i := AAction.ScreenRectRes.Left;
+      while (i < AAction.ScreenRectRes.Right) do
+      begin
+        PingPong := Not(PingPong);
+        Line := true;
+        while (Line) do
+        begin
+          if (Assigned(AFunc)) then
+          begin
+            BoolResult := AFunc(i, j, AAction);
+            if (BoolResult) then
+              Exit;
+          end;
+          if (PingPong) then
+          begin
+            j := j + AAction.ScreenStep;
+            Line := (j < AAction.ScreenRectRes.Bottom);
+          end
+          else
+          begin
+            j := j - AAction.ScreenStep;
+            Line := (j > AAction.ScreenRectRes.Top);
+          end;
         end;
         i := i + AAction.ScreenStep;
       end;
@@ -137,7 +218,7 @@ end;
 function LookForEmptyFunc(x: Integer; y: Integer; AAction: TAction): Boolean;
 begin
   Result := false;
-  DoMouseMove(TPoint.Create(x, y), 0, 0);
+  DoMouseMove(TPoint.Create(x, y), AAction.Interval, AAction.Sleep);
 end;
 
 procedure LookForEmpty(AAction: TAction);
@@ -184,9 +265,29 @@ begin
   DoMouseClick(mbLeft, AAction.Interval, AAction.Sleep);
 end;
 
+procedure MouseDownLeft(AAction: TAction);
+begin
+  DoMouseDown(mbLeft, AAction.Interval, AAction.Sleep);
+end;
+
+procedure MouseUpLeft(AAction: TAction);
+begin
+  DoMouseUp(mbLeft, AAction.Interval, AAction.Sleep);
+end;
+
 procedure MousePressRight(AAction: TAction);
 begin
   DoMouseClick(mbRight, AAction.Interval, AAction.Sleep);
+end;
+
+procedure MouseDownRight(AAction: TAction);
+begin
+  DoMouseDown(mbRight, AAction.Interval, AAction.Sleep);
+end;
+
+procedure MouseUpRight(AAction: TAction);
+begin
+  DoMouseUp(mbRight, AAction.Interval, AAction.Sleep);
 end;
 
 function MouseFloodLeftFunc(x: Integer; y: Integer; AAction: TAction): Boolean;

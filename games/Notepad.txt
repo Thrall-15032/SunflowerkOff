@@ -1,7 +1,7 @@
 %NAVUHODONOSER%
 Name=Notepad
-Process=* Untitled - Notepad 2e x64
-Params=WindowPosition,1400,100,WindowSize,380,880,StartWindowCenter
+Process=Без имени — Блокнот
+Params=StartWindowCenter,WindowPosition,1400,100,WindowSize,380,380
 #=Loop Test
 ##Loop,11
 ###KeyPressOne,A,50,0

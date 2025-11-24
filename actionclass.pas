@@ -190,7 +190,8 @@ begin
         Result.Interval := StrToInt(ArrTmp[2]);
         Result.Sleep := StrToInt(ArrTmp[3]);
       end;
-      actMousePressLeft, actMousePressRight:
+      actMousePressLeft, actMouseDownLeft, actMouseUpLeft,
+      actMousePressRight, actMouseDownRight, actMouseUpRight:
       begin
         Result.Interval := StrToInt(ArrTmp[1]);
         Result.Sleep := StrToInt(ArrTmp[2]);
@@ -238,6 +239,11 @@ begin
           index := 4;
         end;
         Result.ScreenStep := StrToInt(ArrTmp[index]);
+        if (Length(ArrTmp) = index + 3) then
+        begin
+          Result.Interval := StrToInt(ArrTmp[index + 1]);
+          Result.Sleep := StrToInt(ArrTmp[index + 2]);
+        end;
       end;
       actLookForPixel:
       begin
@@ -251,6 +257,11 @@ begin
         end;
         Result.PixelColor := Hex2Dec(ArrTmp[index]);
         Result.ScreenStep := StrToInt(ArrTmp[index + 1]);
+        if (Length(ArrTmp) = index + 4) then
+        begin
+          Result.Interval := StrToInt(ArrTmp[index + 2]);
+          Result.Sleep := StrToInt(ArrTmp[index + 3]);
+        end;
       end;
     end;
   except
@@ -331,9 +342,31 @@ begin
 end;
 
 function ParamsToStr(AGameParams: TGameParams): string;
+var
+  StrListTmp: TStringList;
 begin
-  Result := ''; // TODO
-
+  StrListTmp := TStringList.Create();
+  StrListTmp.Delimiter := ',';
+  if (AGameParams.DoMaximize) then
+    StrListTmp.Add('Maximize');
+  if (AGameParams.DoStartDisplayCenter) then
+    StrListTmp.Add('StartDisplayCenter');
+  if (AGameParams.DoStartWindowCenter) then
+    StrListTmp.Add('StartWindowCenter');
+  if (AGameParams.DoWindowPosition) then
+  begin
+    StrListTmp.Add('WindowPosition');
+    StrListTmp.Add(IntToStr(AGameParams.NewWindowPosition.X));
+    StrListTmp.Add(IntToStr(AGameParams.NewWindowPosition.Y));
+  end;
+  if (AGameParams.DoWindowSize) then
+  begin
+    StrListTmp.Add('WindowSize');
+    StrListTmp.Add(IntToStr(AGameParams.NewWindowSize.X));
+    StrListTmp.Add(IntToStr(AGameParams.NewWindowSize.Y));
+  end;
+  Result := StrListTmp.DelimitedText;
+  FreeObject(StrListTmp);
 end;
 
 function ParsePointRes(AAction: TAction; ARect: TRect): TPoint;

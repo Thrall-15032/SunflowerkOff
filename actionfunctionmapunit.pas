@@ -159,7 +159,11 @@ begin
   FActionFunctionMap.Add(actLookForEmpty, @LookForEmpty);
   FActionFunctionMap.Add(actLookForPixel, @LookForPixel);
   FActionFunctionMap.Add(actMousePressLeft, @MousePressLeft);
+  FActionFunctionMap.Add(actMouseDownLeft, @MouseDownLeft);
+  FActionFunctionMap.Add(actMouseUpLeft, @MouseUpLeft);
   FActionFunctionMap.Add(actMousePressRight, @MousePressRight);
+  FActionFunctionMap.Add(actMouseDownRight, @MouseDownRight);
+  FActionFunctionMap.Add(actMouseUpRight, @MouseUpRight);
   FActionFunctionMap.Add(actMouseFloodLeft, @MouseFloodLeft);
   FActionFunctionMap.Add(actMouseFloodRight, @MouseFloodRight);
 end;

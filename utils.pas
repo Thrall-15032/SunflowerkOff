@@ -80,13 +80,15 @@ end;
 
 function RemoveSpecSymbols(AStr: string): string;
 begin
-  Result := RemoveChar(AStr, '#');
-  Result := RemoveChar(AStr, '=');
+  Result := AStr;
+  Result := RemoveChar(Result, '#');
+  Result := RemoveChar(Result, '=');
 end;
 
 function RemovePercentChar(AStr: string): string;
 begin
-  Result := RemoveChar(AStr, '%');
+  Result := AStr;
+  Result := RemoveChar(Result, '%');
 end;
 
 function StrSplit(AStr: string; ADelimiter: char = ','): StringArr;

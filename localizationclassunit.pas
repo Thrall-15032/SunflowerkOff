@@ -26,6 +26,7 @@ type
     PARAMS_TAB: string;
     TEST_BUTTON: string;
     START_BUTTON: string;
+    STOP_BUTTON: string;
     SAVE_BUTTON: string;
     CANCEL_BUTTON: string;
     CHECK_ALL_MENU: string;
@@ -60,6 +61,7 @@ type
     function getParamsTab(): string;
     function getTestButton(): string;
     function getStartButton(): string;
+    function getStopButton(): string;
     function getSaveButton(): string;
     function getCancelButton(): string;
     function getCheckAllMenu(): string;
@@ -95,6 +97,7 @@ type
     property ParamsTab: string read getParamsTab;
     property TestButton: string read getTestButton;
     property StartButton: string read getStartButton;
+    property StopButton: string read getStopButton;
     property SaveButton: string read getSaveButton;
     property CancelButton: string read getCancelButton;
     property CheckAllMenu: string read getCheckAllMenu;
@@ -214,6 +217,13 @@ begin
   Result := 'START';
   if (Length(self.START_BUTTON) > 0) then
     Result := self.START_BUTTON;
+end;
+
+function TLocalization.getStopButton(): string;
+begin
+  Result := 'STOP';
+  if (Length(self.STOP_BUTTON) > 0) then
+    Result := self.STOP_BUTTON;
 end;
 
 function TLocalization.getSaveButton(): string;

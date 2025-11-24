@@ -1,13 +1,14 @@
 object ActionEditForm: TActionEditForm
-  Left = 866
+  Left = 899
   Height = 644
-  Top = 231
+  Top = 372
   Width = 378
   Caption = 'ActionEdit'
   ClientHeight = 644
   ClientWidth = 378
   DesignTimePPI = 120
-  LCLVersion = '3.4.0.0'
+  Position = poDesktopCenter
+  LCLVersion = '4.0.0.4'
   object btnSave: TButton
     Left = 48
     Height = 31
